@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#12151b">
+  <meta name="description" content="Portfólio de Rodrigo Fagnani: Engenharia de Software na PUCPR, desenvolvimento web, Python e iniciação científica com o Estuda+.">
+  <title>Rodrigo Fagnani | Portfólio</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2312151b'/%3E%3Ctext x='3' y='23' fill='%236fe3a6' font-family='monospace' font-size='19' font-weight='bold'%3ERF%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#projetos">Ir para os projetos</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="#inicio" aria-label="Rodrigo Fagnani — início">rf<span>.</span></a>
+      <nav aria-label="Menu principal">
+        <a href="#projetos"><span class="prompt" aria-hidden="true">$</span> projetos <span class="nav-count">05</span></a>
+        <a href="#sobre"><span class="prompt" aria-hidden="true">$</span> sobre</a>
+        <a href="https://github.com/Rodfagnani-dev" target="_blank" rel="noopener noreferrer" class="github-link">GitHub <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero container" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="hero-kicker"><span class="prompt" aria-hidden="true">$</span> whoami</p>
+        <h1 id="hero-title">Rodrigo Fagnani<span class="cursor" aria-hidden="true">_</span></h1>
+        <p class="hero-role">Estudante de Engenharia de Software na PUCPR.</p>
+        <p class="hero-description">Programação, pesquisa e aprendizado na prática. Conheça os projetos que fazem parte da minha trajetória.</p>
+        <div class="hero-actions">
+          <a class="button" href="#projetos">Ver projetos</a>
+          <a class="button button-ghost" href="#sobre">Sobre mim</a>
+        </div>
+        <p class="full-name">// nome completo: Rodrigo de Araujo Fagnani Filho</p>
+      </div>
+
+      <div class="hero-graph" aria-hidden="true">
+        <p class="hero-graph-label">git log --oneline</p>
+        <ol class="commit-preview">
+          <li><span class="commit-dot"></span><span class="commit-hash">a1c4e2f</span><span class="commit-msg">feat: Estuda+ — iniciação científica</span></li>
+          <li><span class="commit-dot"></span><span class="commit-hash">7b9d031</span><span class="commit-msg">feat: currículo web pessoal</span></li>
+          <li><span class="commit-dot"></span><span class="commit-hash">4f2a88c</span><span class="commit-msg">exerc: lógica em Python</span></li>
+          <li><span class="commit-dot"></span><span class="commit-hash">e60c1aa</span><span class="commit-msg">feat: carrossel de imagens</span></li>
+          <li><span class="commit-dot"></span><span class="commit-hash">0d3f7e1</span><span class="commit-msg">avaliação: portal de jogos</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <div class="skills-strip">
+      <div class="container skills-inner">
+        <span class="strip-label"><span class="prompt" aria-hidden="true">$</span> stack --list</span>
+        <span>HTML <small>&lt;/&gt;</small></span>
+        <span>CSS <small>{ }</small></span>
+        <span>JavaScript <small>JS</small></span>
+        <span>Python <small>PY</small></span>
+        <span>Pesquisa <small>+</small></span>
+      </div>
+    </div>
+
+    <!-- PROJETOS (agora em primeiro) -->
+    <section class="projects container" id="projetos" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span class="prompt" aria-hidden="true">$</span> ls projetos/</p>
+          <h2 id="projects-title">Meus projetos<span>.</span></h2>
+        </div>
+        <p>Da ideia à construção.</p>
+      </div>
+
+      <div class="projects-layout">
+        <nav id="project-list" class="project-list" aria-label="Escolher projeto"></nav>
+
+        <article id="project-panel" class="project-panel">
+          <header class="project-header">
+            <div>
+              <p class="eyebrow" id="project-category"></p>
+              <h3 id="project-title"></h3>
+              <div id="project-tags" class="tags"></div>
+            </div>
+            <div class="project-intro">
+              <p id="project-summary"></p>
+              <a class="source-link" id="project-link" target="_blank" rel="noopener noreferrer"></a>
+            </div>
+          </header>
+
+          <div class="tabs" role="tablist" aria-label="Detalhes e imagens">
+            <button type="button" role="tab" id="tab-about" aria-controls="panel-about" aria-selected="true" tabindex="0" data-tab="about">Sobre o projeto</button>
+            <button type="button" role="tab" id="tab-images" aria-controls="panel-images" aria-selected="false" tabindex="-1" data-tab="images">Galeria <span id="image-count">0</span></button>
+          </div>
+
+          <section id="panel-about" role="tabpanel" aria-labelledby="tab-about">
+            <div id="project-details" class="details"></div>
+          </section>
+
+          <section id="panel-images" role="tabpanel" aria-labelledby="tab-images" hidden>
+            <div class="gallery-heading">
+              <h4>Registros do projeto</h4>
+              <p>Imagens e momentos dessa trajetória.</p>
+            </div>
+            <div id="gallery" class="gallery"></div>
+          </section>
+
+          <div class="project-bottom">
+            <span id="project-position"></span>
+            <button type="button" class="next-project" id="next-project">Próximo projeto <span aria-hidden="true">→</span></button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SOBRE MIM (agora em segundo) -->
+    <section class="curiosities container" id="sobre" aria-labelledby="curiosities-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span class="prompt" aria-hidden="true">$</span> cat sobre.md</p>
+          <h2 id="curiosities-title">Além do código<span>.</span></h2>
+        </div>
+        <p>Um pouco da minha trajetória.</p>
+      </div>
+      <div class="curiosity-grid">
+        <article class="curiosity-card">
+          <img src="imagens/curiosidades/fotos.jpeg" alt="Imagem no intercambio na Califórnia">
+          <div class="curiosity-content">
+            <span>01</span>
+            <h3>Intercâmbio na Califórnia</h3>
+            <p>Participei de um intercâmbio para a Califórnia promovido pelo Colégio Bom Jesus. Passei um mês vivendo uma nova cultura, praticando inglês e acumulando experiências que contribuíram para o meu crescimento pessoal.</p>
+            <a href="https://www.google.com/maps/place/California,+USA/" target="_blank" rel="noopener noreferrer">Conhecer a Califórnia <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <article class="curiosity-card">
+          <img src="imagens/curiosidades/picture.png" alt="Garoto fazendo live na Twitch">
+          <div class="curiosity-content">
+            <span>02</span>
+            <h3>Lives</h3>
+            <p>Fui criador de conteúdo na Twitch, onde conquistei o status de afiliado e tive a oportunidade de transformar minhas transmissões em uma fonte de renda. Porem para focar nos estudos parei de transimitir a alguns anos.</p>
+            <a href="https://www.twitch.tv/rodzinrp" target="_blank" rel="noopener noreferrer">Visitar a Twitch <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <article class="curiosity-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZFThq69D9RU9bQtDz_25bKtoQUa33hszOl3BpMSs4qA&s=10" alt="Logo Valorant">
+          <div class="curiosity-content">
+            <span>03</span>
+            <h3>Valorant</h3>
+            <p>Valorant é um dos jogos que mais gosto de jogar no meu tempo livre. Suas partidas combinam estratégia, comunicação e trabalho em equipe, tornando cada rodada um novo desafio.</p>
+            <a href="https://tracker.gg/valorant/profile/riot/Rodzin%235071/overview?platform=pc&playlist=competitive&season=8102cd81-43a0-d0d7-bd59-47b8fe9bed1b" target="_blank" rel="noopener noreferrer">Visite meu perfil no valorant<span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <article class="curiosity-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmOxHwtxwvSzLsUEO2eg_pirjkDzHPathTrqVthUHwgA&s=10" alt="Escudo sao paulo">
+          <div class="curiosity-content">
+            <span>04</span>
+            <h3>Futebol</h3>
+            <p>O futebol é uma das minhas grandes paixões. Gosto de acompanhar partidas e aproveitar o esporte como uma forma de lazer e conexão com outras pessoas.</p>
+            <a href="https://www.saopaulofc.net" target="_blank" rel="noopener noreferrer">Visite o site do meu time de coração<span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <div>
+      <a class="logo" href="#inicio">rf<span>.</span></a>
+      <p>Rodrigo de Araujo Fagnani Filho<br><span>Engenharia de Software — PUCPR</span></p>
+    </div>
+    <a href="#inicio"><span class="prompt" aria-hidden="true">$</span> voltar ao início <span aria-hidden="true">↑</span></a>
+  </footer>
+
+  <dialog id="image-dialog" aria-label="Imagem ampliada">
+    <button type="button" id="close-dialog" aria-label="Fechar imagem">×</button>
+    <img id="dialog-image" alt="">
+    <p id="dialog-caption"></p>
+  </dialog>
+</body>
+</html>
